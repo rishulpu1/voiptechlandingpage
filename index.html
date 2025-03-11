@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voip Tech</title>
+    <link rel="stylesheet" href="css/out.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Top Header -->
+         <div class="py-2">
+            <div class="flex justify-end gap-x-2 w-full px-3 xl:px-0 w-full xl:w-6xl 2xl:w-7xl mx-auto">
+                
+                <!-- Lang Selector -->
+                 <div>
+                    <select name="lang" id="lang" class=" px-2 py-1">
+                        <option value="en"><span class="globe-icn"><img src="images/glob-icon.png" alt="" /></span> English <span class="flag"> <img src="images/flag-ind.png" alt="" /> </span></option>
+                        <option value="fr">French</option>
+                    </select>
+                 </div>
+                 <a href="tel:+12312312" class="text-black">+099812334343</a>
+            </div>
+         </div>
+        <!-- Main Header -->
+         <div class="py-2 border-y">
+
+
+            <!-- Navigation -->
+            <nav class="">
+                <div class="w-full px-3 xl:px-0 xl:w-6xl 2xl:w-7xl mx-auto">
+                    <div class="relative flex h-16 items-center justify-between">
+                        <!-- Mobile menu button -->
+                        <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
+                            <button type="button" id="mobile-menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                                <span class="absolute -inset-0.5"></span>
+                                <span class="sr-only">Open main menu</span>
+                                <!-- Hamburger icon -->
+                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <!-- Close icon -->
+                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Logo and desktop menu -->
+                        <div class="flex flex-1 items-center justify-center  md:justify-between">
+                            <div class="flex flex-shrink-0 items-center">
+                                <img class="w-[200px]" src="images/logo.png" alt="Voip Tech">
+                            </div>
+                            <div class="hidden md:ml-6 md:block">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Voip Services</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="bg-[#e5462c] text-white py-2 px-6 rounded-md">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu -->
+                <div class="md:hidden hidden absolute right-4 bg-white shadow-lg z-9" id="mobile-menu">
+                    <ul class="space-y-1 px-2 pb-3 pt-2">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Voip Services</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+
+            <!-- <div class="flex justify-between items-center w-full px-3 xl:px-0 xl:w-6xl 2xl:w-7xl mx-auto">
+                <div class="logo">
+                    <img src="images/logo.png" alt="" class="max-w-[200px]" />
+                </div>
+                <nav>
+                    <ul class="flex gap-x-4">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Voip Services</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="bg-[#e5462c] text-white py-2 px-6 rounded-md">Enquire Now</a>
+         </div> -->
+    </header>
+    <!-- Banner Section -->
+     <section class="bg-linear-65 from-[#e5462c] to-[#ff6c24] py-12 relative">
+        <div class="flex flex-col lg:flex-row justify-between w-full w-full px-3 xl:px-0 xl:w-6xl 2xl:w-7xl mx-auto relative z-9">
+            <div class="w-full md:w-2/5 flex flex-col gap-y-3 items-start">
+                <h5 class="text-white text-5xl">Switch to Our</h5>
+                <h1 class="text-white text-8xl">Call Center Solutions</h1>
+                <p class="text-white text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. </p>
+                <a href="#" class="bg-white text-[#e5462c] py-2 px-6 rounded-md ">Free Demo</a>    
+            </div>
+            <!-- Contact Form-->
+            <div class="w-full md:w-2/5 bg-white p-6 rounded-3xl">
+                
+                <form action="" class="flex flex-col gap-y-3">
+                    <input type="text" placeholder="Full Name" class="border border-gray-300 p-2 rounded-lg" />
+                    <input type="tel" placeholder="Contact Number" class="border p-2 border-gray-300 rounded-lg" />
+                    <input type="email" placeholder="Email Id" class="border border-gray-300 p-2 rounded-lg" />
+                    <select class="border border-gray-300 p-2 rounded-lg text-gray-500">
+                        <option value="0">Number of Users</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Describe your need" class="border border-gray-300 p-2 rounded-lg"></textarea>
+                    <button type="submit" class="bg-[#ff6c24] text-white py-2 rounded-md cursor-pointer">Get a Free Demo</button>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="absolute bottom-0 left-0 w-full z-0">
+            <img src="images/wave-bg.png" alt="" class="w-full" />
+        </div>
+     </section>
+
+
+     <script>
+        // Toggle mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            // Toggle menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle hamburger/close icon
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenuButton.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.querySelectorAll('svg').forEach(icon => {
+                    icon.classList.add('hidden');
+                    if (icon.querySelector('d').getAttribute('d') === 'M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5') {
+                        icon.classList.remove('hidden');
+                    }
+                });
+            }
+        });
+
+        // Close menu on resize if window is larger than mobile
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.querySelectorAll('svg').forEach(icon => {
+                    icon.classList.add('hidden1');
+                    if (icon.querySelector('d').getAttribute('d') === 'M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5') {
+                        icon.classList.remove('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
