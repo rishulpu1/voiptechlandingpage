@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/out.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
@@ -16,6 +17,10 @@
             font-family: 'DM Sans', sans-serif;
         }
         .stats-main{clip-path: polygon(0 0, 100% 1%, 100% 53%, 0 67%);}
+
+       
+
+        
     </style>
 </head>
 <body>
@@ -203,7 +208,7 @@
                     <div class="w-full lg:w-2/5">
                         <div class="relative">
                             <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                                <img src="images/icons/play-icn.png" alt="" class="play-vid cursor-pointer w-28" />
+                                <img src="images/icons/play-icn.png" alt="" class="play-vid  cursor-pointer w-28" onclick="openVideo('nzyZwh8v1-8')" />
                             </div>
                             <img src="images/vid-thumb1.png" alt="" class="w-full" />
                         </div>
@@ -310,7 +315,7 @@
                     <div class="w-full lg:w-2/5 relative">
                         <div class="relative">
                             <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                                <img src="images/icons/play-icn.png" alt="" class="play-vid cursor-pointer w-28" />
+                                <img src="images/icons/play-icn.png" alt="" class="play-vid cursor-pointer w-28" onclick="openVideo('ScJ0loAKZ2c')" />
                             </div>
                             <img src="images/vid-thumb2.png" alt="" class="w-full" />
                         </div>
@@ -356,7 +361,8 @@
                             <div class="bg-white p-6 rounded-4xl border-3 border-[#f27113] mx-4">
                                 <div class="flex items-center justify-baseline gap-2 mb-4">
                                     <!-- <img src="https://placehold.co/100x100" alt="Client" class="w-12 h-12 rounded-full"> -->
-                                     <div class="w-[80px] h-[80px] rounded-full bg-[#e5462c]"></div>
+                                    <div class="flex items-center"><div class="w-[80px] h-[80px] rounded-full bg-[#e5462c]"></div></div> 
+                                    
                                     <div class="w-full">
                                         <h4 class="font-bold text-lg">Michael R.</h4>
                                         <p class="text-gray-600">Call Center Manager</p>
@@ -367,12 +373,12 @@
                                 
                             </div>
                         </div>
-
+                        <!-- Testimonial 2 -->
                         <div class="item">
                             <div class="bg-white p-6 rounded-4xl border-3 border-[#f27113] mx-4">
                                 <div class="flex items-center justify-baseline gap-2 mb-4">
                                     <!-- <img src="https://placehold.co/100x100" alt="Client" class="w-12 h-12 rounded-full"> -->
-                                     <div class="w-[80px] h-[80px] rounded-full bg-[#e5462c]"></div>
+                                    <div class="flex items-center"><div class="w-[80px] h-[80px] rounded-full bg-[#e5462c]"></div></div>
                                     <div class="w-full">
                                         <h4 class="font-bold text-lg">Sarah L.</h4>
                                         <p class="text-gray-600">IT Director</p>
@@ -383,12 +389,12 @@
                                 
                             </div>
                         </div>
-
+                        <!-- Testimonial 3 -->
                         <div class="item">
                             <div class="bg-white p-6 rounded-4xl border-3 border-[#f27113] mx-4">
                                 <div class="flex items-center justify-baseline gap-2 mb-4">
                                     <!-- <img src="https://placehold.co/100x100" alt="Client" class="w-12 h-12 rounded-full"> -->
-                                     <div class="w-[80px] h-[80px] rounded-full bg-[#e5462c]"></div>
+                                    <div class="flex items-center"><div class="w-[80px] h-[80px] rounded-full bg-[#e5462c]"></div></div>
                                     <div class="w-full">
                                         <h4 class="font-bold text-lg">James K.</h4>
                                         <p class="text-gray-600">Operations Head</p>
@@ -485,6 +491,40 @@
             </div>
           </div>
     </footer>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            
+            <form id="contactForm" action="" class="flex flex-col gap-y-3">
+                <input type="text" placeholder="Full Name" class="border border-gray-300 p-2 rounded-lg" />
+                <input type="tel" placeholder="Contact Number" class="border p-2 border-gray-300 rounded-lg" />
+                <input type="email" placeholder="Email Id" class="border border-gray-300 p-2 rounded-lg" />
+                <select class="border border-gray-300 p-2 rounded-lg text-gray-500">
+                    <option value="0">Number of Users</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Describe your need" class="border border-gray-300 p-2 rounded-lg"></textarea>
+                <button type="submit" class="bg-[#ff6c24] text-white py-2 rounded-md cursor-pointer">Get a Free Demo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vidoe Popup -->
+    <div class="video-popup" id="videoPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeVideo()">&times;</span>
+            <div class="video-container">
+                <iframe id="youtubeVideo" src="" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -511,6 +551,7 @@
         });
     });
 </script>
+<!-- Mobile Menu -->
      <script>
         // Toggle mobile menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -554,7 +595,86 @@
             }
         });
     </script>
-    <!-- jQuery and Owl Carousel JS -->
+    <!--Popup -->
+    <!--<script>
+        // Show popup after 10 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+            }, 10000);
+        };
+
+        // Close popup functionality
+        document.getElementById('closePopup').onclick = function() {
+            document.getElementById('popup').style.display = 'none';
+        };
+
+        // Close when clicking outside the popup content
+        window.onclick = function(event) {
+            const popup = document.getElementById('popup');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        };
+
+        // Form submission handling
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Form submitted!');
+            document.getElementById('popup').style.display = 'none';
+        };
+    </script>-->
+    <script>
+        // Show popup after 10 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+            }, 10000);
+        };
+
+        // Close popup functionality
+        document.getElementById('closePopup').onclick = function() {
+            document.getElementById('popup').style.display = 'none';
+        };
+
+        // Form submission handling
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Form submitted!');
+            document.getElementById('popup').style.display = 'none';
+        };
+    </script>
+    <!-- Vidoe Popup -->
+    <script>
+        function openVideo(videoId) {
+            const popup = document.getElementById('videoPopup');
+            const video = document.getElementById('youtubeVideo');
+            
+            // Set YouTube video ID (replace with your video ID)
+            //const videoId = 'dQw4w9WgXcQ';
+            video.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            
+            popup.style.display = 'block';
+        }
+
+        function closeVideo() {
+            const popup = document.getElementById('videoPopup');
+            const video = document.getElementById('youtubeVideo');
+            
+            popup.style.display = 'none';
+            video.src = ''; // Stop the video
+        }
+
+        // Close popup when clicking outside
+        window.onclick = function(event) {
+            const popup = document.getElementById('videoPopup');
+            if (event.target === popup) {
+                closeVideo();
+            }
+        };
+    </script>
 
 </body>
 </html>
